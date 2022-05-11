@@ -133,6 +133,9 @@ const data = [
     para2.textContent = secondParagraph;
     para3.textContent = thirdParagraph;
     span.textContent = '+';
+    span.addEventListener('click', ()=> {
+      articleContainer.classList.toggle('article-open');
+    })
     articleContainer.appendChild(mainTitle);
     articleContainer.appendChild(pubDate);
     articleContainer.appendChild(para1);
