@@ -154,5 +154,5 @@ const data = [
   data.forEach(obj =>{
     const articlesDiv = document.querySelector('.articles');
     articlesDiv.appendChild(articleMaker(obj));
-  })
+  });
 })();
