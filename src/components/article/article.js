@@ -87,6 +87,13 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: "I'm a big weirdo",
+    date: 'now',
+    firstParagraph: "this.",
+    secondParagraph: 'that.',
+    thirdParagraph: 'the other.'
   }
 ];
 
@@ -144,4 +151,8 @@ const data = [
     articleContainer.appendChild(span);
     return articleContainer;
   };
+  data.forEach(obj =>{
+    const articlesDiv = document.querySelector('.articles');
+    articlesDiv.appendChild(articleMaker(obj));
+  })
 })();
