@@ -115,3 +115,30 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+(()=>{
+  const articleMaker = ( {title, date, firstParagraph, secondParagraph, thirdParagraph} ) =>{
+    const articleContainer = document.createElement('div');
+    const mainTitle = document.createElement('h2');
+    const pubDate = document.createElement('p');
+    const para1 = document.createElement('p');
+    const para2 = document.createElement('p');
+    const para3 = document.createElement('p');
+    const span = document.createElement('span');
+    articleContainer.classList.add('article');
+    pubDate.classList.add('date');
+    span.classList.add('expandButton');
+    mainTitle.textContent = title;
+    pubDate.textContent = date;
+    para1.textContent = firstParagraph;
+    para2.textContent = secondParagraph;
+    para3.textContent = thirdParagraph;
+    span.textContent = '+';
+    articleContainer.appendChild(mainTitle);
+    articleContainer.appendChild(pubDate);
+    articleContainer.appendChild(para1);
+    articleContainer.appendChild(para2);
+    articleContainer.appendChild(para3);
+    articleContainer.appendChild(span);
+    return articleContainer;
+  };
+})();
